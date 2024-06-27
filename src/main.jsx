@@ -6,7 +6,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./store.js";
 import Cart from "./components/Cart.jsx";
-import Product from "./components/Product.jsx";
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -17,7 +16,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <ToastContainer/>
         <Routes>
           <Route path="/" element={<App />}>
-            <Route path="/products" element={<Product/>}/>
           </Route>
           <Route path="/cart" element={<Cart />} />
         </Routes>

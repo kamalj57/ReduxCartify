@@ -8,11 +8,14 @@ import image5 from "../assets/img5.jpg";
 
 const CarouselPage = () => {
   const carouselStyle = {
-    height: "550px"
+    maxHeight: "550px", 
+    overflow: "hidden",
   };
 
   const imgStyle = {
-    height: "550px",
+    width: "100%",
+    height: "auto", 
+    objectFit: "cover", 
   };
 
   return (
@@ -24,7 +27,7 @@ const CarouselPage = () => {
         infiniteLoop={true}
         showStatus={false}
         showThumbs={false}
-        dynamicHeight={false} // Ensure dynamicHeight is set to false
+        swipeable={true} 
       >
         <div>
           <img src={image1} alt="slide 1" style={imgStyle} />

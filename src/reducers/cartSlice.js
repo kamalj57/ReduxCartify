@@ -17,18 +17,18 @@ const cartSlice = createSlice({
             totalcost: action.payload.price,
           });
         toast.success(`You've successfully addedd the product ${action.payload.title} to the cart`,{
-          position: "top-center",
+          position: "bottom-center",
           theme:"dark",
-            autoClose: 3000,
+            autoClose: 1000,
         });
     },
     itemsDeleted: (state, action) => {
       const productToDelete = state.items.find((x) => x.id === action.payload);
       if (productToDelete) {
         toast.success(`You've successfully removed the product ${productToDelete.title} from the cart`,{
-          position: "top-center",
+          position: "bottom-center",
           theme:"dark",
-            autoClose: 3000,
+            autoClose: 1000,
         });
         state.items = state.items.filter((x) => x.id !== action.payload);
       }
@@ -39,9 +39,9 @@ const cartSlice = createSlice({
         foundeditem.quantity += 1;
         foundeditem.totalcost=foundeditem.quantity*foundeditem.price;
         toast.success(`You've changed the "${foundeditem.title}" Quantity to "${foundeditem.quantity}"`,{
-          position: "top-center",
+          position: "bottom-center",
           theme:"dark",
-            autoClose: 3000,
+            autoClose: 1000,
         });
         
     },
@@ -51,16 +51,16 @@ const cartSlice = createSlice({
         foundeditem.quantity -= 1;
         foundeditem.totalcost=foundeditem.quantity*foundeditem.price;
         toast.success(`You've changed the "${foundeditem.title}" Quantity to "${foundeditem.quantity}"`,{
-          position: "top-center",
+          position: "bottom-center",
           theme:"dark",
-            autoClose: 3000,
+            autoClose: 1000,
         })
       }else{
         state.items.pop(foundeditem)
         toast.success(`You've removed the "${foundeditem.title}" from the cart`,{
-          position: "top-center",
+          position: "bottom-center",
           theme:"dark",
-            autoClose: 3000,
+            autoClose: 1000,
         })
       } 
     }
