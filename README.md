@@ -1,4 +1,4 @@
-# REDUX STORE 🛒 
+# REDUX CARTIFY 🛒 
 
 This application was developed to explore Redux concepts in an E-commerce Website.
 
