@@ -1,6 +1,6 @@
 
 import { useSelector } from 'react-redux'
-import Logo from '../assets/reduxtore.svg'
+import Logo from '../assets/reduxcartify.svg'
 import {ShoppingCart} from 'lucide-react'
 import {Link} from 'react-router-dom'
 
